@@ -679,21 +679,52 @@ console.log(animebtn);
 //     });
 // });
 
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime
+//     .timeline({
+//       loop: true
+//     })
+//     .add({
+//       targets: "#animeSample",
+//       duration: 250,
+//       opacity: [1, 0.5, 1],
+//       rotate: [0, 360]
+//     })
+//     .add({
+//       targets: "#animeSample2",
+//       duration: 200,
+//       opacity: [0.5, 1]
+//     });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime
+//     .timeline({
+//       loop: true,
+//       duration: 250
+//     })
+//     .add({
+//       targets: "#animeSample",
+//       rotate: [-360, 0],
+//       easing: "easeInOutCubic"
+//     });
+// });
+
 const btn = document.querySelector("#animebtn");
-btn.addEventListener("click", function() {
+btn.addEventListener("click", () => {
   return anime
     .timeline({
-      loop: true
+      loop: true,
+      opacity: [1, 0.3, 1]
     })
     .add({
       targets: "#animeSample",
-      duration: 250,
-      opacity: [1, 0.5, 1],
-      rotate: [0, 360]
+      duration: 250
     })
     .add({
       targets: "#animeSample2",
-      duration: 200,
-      opacity: [0.5, 1]
+      duration: 400
     });
 });
