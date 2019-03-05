@@ -552,60 +552,148 @@ console.log(animebtn);
 //     });
 // };
 
-animebtn.onclick = function() {
-  var animeT = anime.timeline({
-    duration: 2000,
-    loop: true
-  });
-  animeT
+// animebtn.onclick = function() {
+//   var animeT = anime.timeline({
+//     duration: 2000,
+//     loop: true
+//   });
+//   animeT
+//     .add({
+//       targets: "#animeSample",
+//       translateX: [
+//         { value: 250, duration: 1000, delay: 500 },
+//         { value: 0, duration: 1000, delay: 500 }
+//       ],
+//       translateY: [
+//         { value: -40, duration: 500 },
+//         { value: 40, duration: 500, delay: 1000 },
+//         { value: 0, duration: 500, delay: 1000 }
+//       ],
+//       scaleX: [
+//         { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
+//         { value: 1, duration: 900 },
+//         { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
+//         { value: 1, duration: 900 }
+//       ],
+//       scaleY: [
+//         { value: [1.75, 1], duration: 500 },
+//         { value: 2, duration: 50, delay: 1000, easing: "easeOutExpo" },
+//         { value: 1, duration: 450 },
+//         { value: 1.75, duration: 50, delay: 1000, easing: "easeOutExpo" },
+//         { value: 1, duration: 450 }
+//       ]
+//     })
+//     .add({
+//       targets: "#animeSample2",
+//       translateX: [
+//         { value: 150, duration: 800, delay: 300 },
+//         { value: 0, duration: 1000, delay: 500 }
+//       ],
+//       translateY: [
+//         { value: -40, duration: 500 },
+//         { value: 40, duration: 500, delay: 1000 },
+//         { value: 0, duration: 500, delay: 1000 }
+//       ],
+//       scaleX: [
+//         { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
+//         { value: 1, duration: 900 },
+//         { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
+//         { value: 1, duration: 900 }
+//       ],
+//       scaleY: [
+//         { value: [1.75, 1], duration: 500 },
+//         { value: 2, duration: 50, delay: 1000, easing: "easeOutExpo" },
+//         { value: 1, duration: 450 },
+//         { value: 1.75, duration: 50, delay: 1000, easing: "easeOutExpo" },
+//         { value: 1, duration: 450 }
+//       ]
+//     });
+// };
+
+// animebtn.onclick = function() {
+//   var path = anime.path("#animeSample path");
+//   anime({
+//     targets: "#animeSample",
+//     translateX: path("x"),
+//     translateY: path("y"),
+//     rotate: path("angle"),
+//     easing: "linear",
+//     duration: 2000,
+//     loop: true
+//   });
+// };
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", () => {
+//   return anime({
+//     targets: "#animeSample",
+//     duration: 2000,
+//     translateX: 250
+//   });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime
+//     .timeline({ targets: "#animeSample", duration: 2000, loop: true })
+//     .add({
+//       translateX: 250
+//     });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime
+//     .timeline({
+//       duration: 3000,
+//       loop: true
+//     })
+//     .add({
+//       targets: "#animeSample",
+//       translateX: 250,
+//       easing: "easeOutExpo"
+//     })
+//     .add({
+//       targets: "#animeSample2",
+//       translateX: 250,
+//       easing: "easeInExpo"
+//     });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", () => {
+//   return anime
+//     .timeline({
+//       duration: 200,
+//       loop: true
+//     })
+//     .add({
+//       targets: "#animeSample",
+//       rotate: [0, 360],
+//       easing: "easeInExpo"
+//     })
+//     .add({
+//       targets: "#animeSample2",
+//       rotate: [-360, 0],
+//       easing: "easeInExpo"
+//     });
+// });
+
+const btn = document.querySelector("#animebtn");
+btn.addEventListener("click", function() {
+  return anime
+    .timeline({
+      loop: true
+    })
     .add({
       targets: "#animeSample",
-      translateX: [
-        { value: 250, duration: 1000, delay: 500 },
-        { value: 0, duration: 1000, delay: 500 }
-      ],
-      translateY: [
-        { value: -40, duration: 500 },
-        { value: 40, duration: 500, delay: 1000 },
-        { value: 0, duration: 500, delay: 1000 }
-      ],
-      scaleX: [
-        { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
-        { value: 1, duration: 900 },
-        { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
-        { value: 1, duration: 900 }
-      ],
-      scaleY: [
-        { value: [1.75, 1], duration: 500 },
-        { value: 2, duration: 50, delay: 1000, easing: "easeOutExpo" },
-        { value: 1, duration: 450 },
-        { value: 1.75, duration: 50, delay: 1000, easing: "easeOutExpo" },
-        { value: 1, duration: 450 }
-      ]
+      duration: 250,
+      opacity: [1, 0.5, 1],
+      rotate: [0, 360]
     })
     .add({
       targets: "#animeSample2",
-      translateX: [
-        { value: 150, duration: 800, delay: 300 },
-        { value: 0, duration: 1000, delay: 500 }
-      ],
-      translateY: [
-        { value: -40, duration: 500 },
-        { value: 40, duration: 500, delay: 1000 },
-        { value: 0, duration: 500, delay: 1000 }
-      ],
-      scaleX: [
-        { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
-        { value: 1, duration: 900 },
-        { value: 4, duration: 100, delay: 500, easing: "easeOutExpo" },
-        { value: 1, duration: 900 }
-      ],
-      scaleY: [
-        { value: [1.75, 1], duration: 500 },
-        { value: 2, duration: 50, delay: 1000, easing: "easeOutExpo" },
-        { value: 1, duration: 450 },
-        { value: 1.75, duration: 50, delay: 1000, easing: "easeOutExpo" },
-        { value: 1, duration: 450 }
-      ]
+      duration: 200,
+      opacity: [0.5, 1]
     });
-};
+});
