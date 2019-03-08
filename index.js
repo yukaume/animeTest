@@ -1,5 +1,5 @@
-const animebtn = document.getElementById("animebtn");
-console.log(animebtn);
+// const animebtn = document.getElementById("animebtn");
+// console.log(animebtn);
 
 // animebtn.onclick = (function () {
 //     // anime({
@@ -712,19 +712,361 @@ console.log(animebtn);
 //     });
 // });
 
-const btn = document.querySelector("#animebtn");
-btn.addEventListener("click", () => {
-  return anime
-    .timeline({
-      loop: true,
-      opacity: [1, 0.3, 1]
-    })
-    .add({
-      targets: "#animeSample",
-      duration: 250
-    })
-    .add({
-      targets: "#animeSample2",
-      duration: 400
-    });
-});
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", () => {
+//   return anime
+//     .timeline({
+//       loop: true,
+//       opacity: [1, 0.3, 1]
+//     })
+//     .add({
+//       targets: "#animeSample",
+//       duration: 250
+//     })
+//     .add({
+//       targets: "#animeSample2",
+//       duration: 400
+//     });
+// });
+
+// const btn = document.querySelector('#animebtn');
+// btn.addEventListener('click', function () {
+//     return anime.timeline({
+//         loop: true,
+//         opacity:[1,0.5,1]
+//     })
+//         .add({
+//             targets: '#animeSample',
+
+//     })
+// })
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime
+//     .timeline({
+//       targets: ".items",
+//       easing: "easeInOutCubic",
+//       duration: 2000
+//     })
+//     .add({
+//       translateX: function(el, i, len) {
+//         const angle = (360 / len) * i;
+//         const radian = Math.PI / 180;
+//         return Math.sin(angle * radian) * 30;
+//       },
+//       translateY: function(el, i, len) {
+//         const angle = (360 / len) * i;
+//         const radian = Math.PI / 180;
+//         return Math.cos(angle * radian) * 30;
+//       }
+//     });
+// });
+
+//  ------------  RepeatRotate ------------------
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime({
+//     targets: ".items",
+//     duration: 3000,
+//     loop: true,
+//     direction: "alternate",
+//     easing: "easeInSine",
+//     scale: function(el, i) {
+//       return [1 - i * 0.5, 1 + i * 0.5];
+//     }
+//     // rotateZ: function(el, i) {
+//     //   const deg = 20;
+//     //   return [0 - i * deg, 45 + i * deg];
+//     // }
+//   });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime({
+//     targets: ".items",
+//     duration: 3000,
+//     loop: true,
+//     direction: "alternate",
+//     easing: "easeInSine",
+//     scale: function(el, i) {
+//       return [1 - i * 0.5, 0 + i * 0.5];
+//     }
+//     // rotateZ: function(el, i) {
+//     //   const deg = 20;
+//     //   return [0 - i * deg, 45 + i * deg];
+//     // }
+//   });
+// });
+
+// ----------- RepeatScale ------------------
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime({
+//     targets: ".items",
+//     duration: 3000,
+//     loop: true,
+//     direction: "alternate",
+//     easing: "easeInSine",
+//     scale: function(el, i) {
+//       return [0, 1 + i * 0.5];
+//     }
+//     // rotateZ: function(el, i) {
+//     //   const deg = 20;
+//     //   return [0 - i * deg, 45 + i * deg];
+//     // }
+//   });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime({
+//     targets: ".items",
+//     duration: 3000,
+//     loop: true,
+//     direction: "alternate",
+//     easing: "easeInSine",
+//     translateX: function(el, i) {
+//       const deg = 30;
+//       return [0 - i * deg, 1 + i * deg];
+//     }
+//   });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime
+//     .timeline({
+//       targets: ".items",
+//       loop: true
+//     })
+//     .add({
+//       direction: "alternate",
+//       easing: "easeInSine",
+//       duration: 3000,
+//       translateX: function(el, i) {
+//         const deg = 30;
+//         return [0 - i * deg, 1 + i * deg];
+//       }
+//     });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime({
+//     targets: ".items",
+//     duration: 3000,
+//     loop: true,
+//     direction: "alternate",
+//     easing: "easeInSine",
+//     translateX: function(el, i) {
+//       const deg = 30;
+//       return [0 - i * deg, 1 + i * deg];
+//     }
+//   });
+// });
+
+// --------- RepeatMove -------------
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime({
+//     targets: ".items",
+//     duration: 2000,
+//     loop: true,
+//     direction: "alternate",
+//     easing: "easeInSine",
+//     // skewY: 45,
+//     translateX: function(el, i) {
+//       const dis = 40;
+//       return [0 - i * dis, 1 + i * dis];
+//     },
+//     rotateZ: [-45, 45]
+//   });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime({
+//     targets: ".items",
+//     duration: 4000,
+//     loop: true,
+//     direction: "alternate",
+//     rotateZ: [-180, 180],
+//     rotateY: function(el, i) {
+//       return [0, 90 + i * 10];
+//     }
+//   });
+// });
+
+// ---------- Z-axisRotate ---------------
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime({
+//     targets: ".items",
+//     duration: 2000,
+//     direction: "alternate",
+//     loop: true,
+//     easing: "easeInSine",
+//     rotateX: function(el, i) {
+//       return [Math.random() * -180, Math.random() * 180];
+//     },
+//     rotateY: function(el, i) {
+//       return [Math.random() * -180, Math.random() * 180];
+//     },
+//     rotateZ: function(el, i) {
+//       return [Math.random() * -180, Math.random() * 180];
+//     }
+//   });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime({
+//     targets: ".items",
+//     loop: true,
+//     direction: "alternate",
+//     duration: 1000,
+//     easing: "easeInSine",
+//     scale: 0.8,
+//     opacity: [1, 0]
+//   });
+// });
+
+// ---------- LineWeight ------------------
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   return anime
+//     .timeline({
+//       targets: ".items",
+//       loop: true,
+//       direction: "alternate",
+//       duration: 1000,
+//       easing: "easeInSine",
+//       scale: [0.8, 1]
+//     })
+//     .add({
+//       targets: ".items1",
+//       loop: true,
+//       direction: "alternate",
+//       duration: 1000,
+//       easing: "easeInSine",
+//       scale: [1.1, 1]
+//     });
+// });
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   var tl = "";
+//   return (tl += anime.timeline({
+//     loop: true,
+//     easing: "easeOutQuart"
+//   }));
+//   tl.add({
+//     width: "100%",
+//     targets: ".black"
+//   });
+//   tl.add({
+//     targets: ".white",
+//     width: ["0%", "100%"]
+//   });
+// });
+
+// const tl = anime.timeline({
+//   loop: true,
+//   easing: "easeOutQuart"
+// });
+// tl.add({
+//   width: "100%",
+//   targets: ".black"
+// }).add({
+//   targets: ".white",
+//   width: ["0%", "100%"]
+// });
+
+// anime
+//   .timeline({
+//     loop: true,
+//     easing: "easeInOutQuad"
+//   })
+//   .add({
+//     width: "100%",
+//     targets: ".black"
+//   })
+//   .add({
+//     targets: ".white",
+//     width: ["0%", "100%"]
+//   });
+
+// ---------- Trim Line ----------
+// anime
+//   .timeline({
+//     loop: true,
+//     easing: "easeInOutCirc"
+//   })
+//   .add({
+//     targets: ".black",
+//     width: "100%"
+//   })
+//   .add({
+//     targets: ".white",
+//     width: ["0%", "100%"]
+//   });
+
+// ------------- Text（できなかった） ---------------------
+// var big = document.getElementById("textBig");
+// var small = document.querySelector("#textSmall");
+// big.textContent = ["A", "B", "C", "D"];
+// small.textContent = ["a", "b", "c", "d"];
+// console.log(small);
+
+// anime
+//   .timeline({
+//     loop: true,
+//     direction: "alternate",
+//     easing: "easeInOutCirc"
+//   })
+//   .add({
+//     targets: big,
+
+//   });
+
+// var item = document.querySelector(".items");
+// console.log(item);
+
+// const btn = document.querySelector("#animebtn");
+// btn.addEventListener("click", function() {
+//   anime({
+//     targets: "#wrapper",
+//     easing: "easeInBack",
+//     loop: true,
+//     duration: 3000,
+//     direction: "alternate",
+//     rotateZ: [0, 90, 180, 90, 200, 360, 180]
+//   });
+// });
+
+// anime({
+//   targets: "#wrapper",
+//   easing: "easeInOutQuad",
+//   loop: true,
+//   duration: 1800,
+//   direction: "alternate"
+//   //   rotateZ: [-90, 90]
+// });
+
+anime
+  .timeline({
+    targets: ".items1",
+    translateX: [200, -200],
+    duration: 2500,
+    easing: "linear",
+    loop: true
+  })
+  .add({
+    targets: ".items2",
+    translateX: [-200, 200],
+    duration: 2500,
+    easing: "linear"
+  });

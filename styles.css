@@ -1,23 +1,9 @@
-#animeSample {
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 1px solid blue;
-    margin: 50px auto;
-}
-
-#animeSample2 {
-    width: 2.5rem;
-    height: 2.5rem;
-    border: 1px solid palevioletred;
-    margin: 50px auto;
-}
-
 #animebtn {
     background-color: greenyellow;
     color: green;
     width: 4.5rem;
     height: 1.5rem;
-    margin: 50px auto;
+    margin: 60px auto;
     text-align: center;
     vertical-align: middle;
     font-size: 14px;
@@ -31,4 +17,57 @@
 #animebtn:hover {
     background-color: green;
     color: greenyellow;
+}
+
+/* #parents {
+    width: 350px;
+    height: 200px;
+    top: 50vh;
+    margin: 0 auto;
+    position: relative;
+    /* overflow: hidden; */
+
+
+/* #wrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: auto;
+    border: 10px solid slateblue;
+    justify-content: space-between;
+    position: relative;
+}
+
+.items {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    margin: auto;
+    position: absolute;
+    transform: rotate(-30deg);
+    top: 40px;
+} */
+
+
+#wrapper {
+    width: 250px;
+    height: 200px;
+    margin: 30px auto;
+    display: block;
+    overflow: hidden;
+
+}
+
+.items1 {
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    margin: 40px auto;
+}
+
+.items2 {
+    width: 30px;
+    height: 30px;
+    background-color: pink;
+    margin: auto;
 }
