@@ -1056,17 +1056,215 @@
 //   //   rotateZ: [-90, 90]
 // });
 
-anime
-  .timeline({
-    targets: ".items1",
-    translateX: [200, -200],
-    duration: 2500,
-    easing: "linear",
-    loop: true
-  })
-  .add({
-    targets: ".items2",
-    translateX: [-200, 200],
-    duration: 2500,
-    easing: "linear"
-  });
+// anime
+//   .timeline({
+//     targets: ".items1",
+//     translateX: [200, -200],
+//     duration: 2500,
+//     easing: "linear",
+//     loop: true
+//   })
+//   .add({
+//     targets: ".items2",
+//     translateX: [-200, 200],
+//     duration: 2500,
+//     easing: "linear"
+//   });
+
+// -------- Grid ---------------
+// anime({
+//   targets: ".square1",
+//   scale: [1, 2],
+//   duration: 1000,
+//   easing: "easeInOutCubic",
+//   direction: "alternate",
+//   loop: true
+// });
+
+// anime({
+//   targets: ".square1",
+//   easing: "easeInCirc",
+//   direction: "alternate",
+//   loop: true,
+//   duration: function() {
+//     return anime.random(500, 3000);
+//   },
+//   translateX: function() {
+//     return anime.random(-10, 200);
+//   },
+//   translateY: function() {
+//     return anime.random(-10, 200);
+//   },
+//   rotate: function() {
+//     return anime.random(-360, 360);
+//   },
+//   scale: function() {
+//     return anime.random(0.5, 2.2);
+//   },
+//   borderRadius: function() {
+//     return ["0%", "50%", "0%"];
+//   }
+// });
+
+// anime
+//   .timeline({
+//     duration: 900,
+//     loop: true
+//   })
+//   .add({
+//     targets: ".items1",
+//     // scale: [0, 1],
+//     easing: "easeOutQuart"
+//   })
+//   .add({
+//     targets: ".items2",
+//     // scale: [0, 1],
+//     easing: "easeOutCubic",
+//     delay: 300
+//   });
+
+// anime({
+//   targets: ".items1,.items2,.items3,.items4",
+//   loop: true,
+//   duration: 20,
+//   easing: "easeInOutCubic",
+//   direction: "alternate",
+//   opacity: function() {
+//     return anime.random(0.6, 1);
+//   },
+//   scale: function() {
+//     return anime.random(0.9, 1);
+//   }
+// });
+
+// anime({
+//   targets: ".items1",
+//   loop: true,
+//   duration: 1000,
+//   delay: 1000,
+//   filter: ["blur(0px)", "blur(30px)"],
+//   direction: "alternate",
+//   easing: "easeOutExpo"
+// });
+
+// anime({
+//   targets: ".items1",
+//   clipPath: ["circle(0px at center)", "circle(100px at center)"],
+//   loop: true,
+//   easing: "easeInOutCubic"
+// });
+
+// anime({
+//   targets: ".items1",
+//   boxShadow: [
+//     {
+//       value: ["10px -10px 10px 0 currentColor", "10px 10px 20px 0 currentColor"]
+//     },
+//     { value: "-10px 10px 30px 0 currentColor" },
+//     { value: "-10px -10px 20px 0 currentColor" },
+//     { value: "10px -10px 10px 0 currentColor" }
+//   ],
+//   loop: true
+// });
+
+// anime({
+//   targets: ".items1",
+//   loop: true,
+//   duration: 4500,
+//   filter: ["blur(0px)", "blur(25px)"],
+//   direction: "alternate",
+//   easing: "easeInExpo"
+// });
+
+//----------- プチシェリー ---------------
+// anime({
+//   targets: ".items1",
+//   duration: 13000,
+//   loop: true,
+//   direction: "alternate",
+//   easing: "linear",
+//   borderColor: ["#EEDFAA", "#FFC7CD"],
+//   rotateX: function(el, i) {
+//     return [Math.random() * -180, Math.random() * 180];
+//   },
+//   rotateY: function(el, i) {
+//     return [Math.random() * -180, Math.random() * 180];
+//   },
+//   rotateZ: function(el, i) {
+//     return [Math.random() * -180, Math.random() * 180];
+//   }
+// });
+// anime({
+//   targets: ".items2",
+//   duration: 4500,
+//   loop: true,
+//   direction: "alternate",
+//   easing: "easeInExpo",
+//   filter: ["blur(5px)", "blur(25px)"]
+// });
+
+
+// ----- ビターオレンジ -----
+// anime
+//     .timeline({
+//         duration: 2000,
+//         loop: true
+//     })
+//     .add({
+//         targets: ".items1",
+//         scale: [0, 1],
+//         easing: "easeOutQuart"
+//     })
+//     .add({
+//         targets: ".items2",
+//         scale: [0, 1.2],
+//         easing: "easeOutCubic",
+//         delay: 100
+//     });
+
+// anime({
+//     targets: '.items1',
+//     loop: true,
+//     duration: 2500,
+//     delay: [100, 500],
+//     translateX: [0, 28, 0, 50, 0],
+//     easing: "easeOutExpo"
+// })
+// anime({
+//     targets: '.items2',
+//     loop: true,
+//     duration: 2500,
+//     delay: [100, 500],
+//     translateX: [0, -28, 0, -50, 0],
+//     easing: "easeOutExpo"
+// })
+
+// anime({
+//     duration: 2000,
+//     easing: 'linear',
+//     loop: true,
+//     targets: '.items2,.items3,.items4,.items5',
+//     keyframes: [{
+//             translateX: 150
+//         },
+//         {
+//             translateY: 150
+//         },
+//         {
+//             translateX: 0
+//         },
+//         {
+//             translateY: 0
+//         }
+//     ],
+// })
+
+
+anime({
+    targets: '.items1',
+    duration: 2000,
+    loop: true,
+    filter: ['saturate(0%)', 'saturate(50%)'],
+    direction: 'alternate',
+    easing: 'easeOutQuint'
+})
