@@ -1178,31 +1178,34 @@
 
 //----------- プチシェリー ---------------
 // anime({
-//   targets: ".items1",
-//   duration: 13000,
-//   loop: true,
-//   direction: "alternate",
-//   easing: "linear",
-//   borderColor: ["#EEDFAA", "#FFC7CD"],
-//   rotateX: function(el, i) {
-//     return [Math.random() * -180, Math.random() * 180];
-//   },
-//   rotateY: function(el, i) {
-//     return [Math.random() * -180, Math.random() * 180];
-//   },
-//   rotateZ: function(el, i) {
-//     return [Math.random() * -180, Math.random() * 180];
-//   }
+//     targets: ".items1",
+//     duration: 5000,
+//     loop: true,
+//     direction: "alternate",
+//     easing: "linear",
+//     borderColor: ["#EEDFAA", "#FFC7CD"],
+//     scale: function () {
+//         loop:1,
+//         return [0,1]
+//     },
+//     rotateX: function (el, i) {
+//         return [0, Math.random() * -180, Math.random() * 180];
+//     },
+//     rotateY: function (el, i) {
+//         return [0, Math.random() * -180, Math.random() * 180];
+//     },
+//     rotateZ: function (el, i) {
+//         return [0, Math.random() * -180, Math.random() * 180];
+//     }
 // });
 // anime({
-//   targets: ".items2",
-//   duration: 4500,
-//   loop: true,
-//   direction: "alternate",
-//   easing: "easeInExpo",
-//   filter: ["blur(5px)", "blur(25px)"]
+//     targets: ".items2",
+//     duration: 4500,
+//     loop: true,
+//     direction: "alternate",
+//     easing: "easeInExpo",
+//     filter: ["blur(5px)", "blur(25px)"]
 // });
-
 
 // ----- ビターオレンジ -----
 // anime
@@ -1259,12 +1262,274 @@
 //     ],
 // })
 
+// anime({
+//     targets: '.items1',
+//     duration: 2000,
+//     loop: true,
+//     filter: ['saturate(0%)', 'saturate(50%)'],
+//     direction: 'alternate',
+//     easing: 'easeOutQuint'
+// })
 
-anime({
-    targets: '.items1',
-    duration: 2000,
-    loop: true,
-    filter: ['saturate(0%)', 'saturate(50%)'],
-    direction: 'alternate',
-    easing: 'easeOutQuint'
-})
+// anime({
+//     targets: '.items2',
+//     filter: ['blur(10%)', 'blur(30%)'],
+
+//     translateY: function () {
+//         return anime.random(-200, 100);
+//     },
+
+//     translateX: function () {
+//         return anime.random(50, 200);
+//     },
+//     translateY: function () {
+//         return anime.random(100, 300);
+//     },
+//     translateX: function () {
+//         return anime.random(-100, -500);
+//     },
+//     loop: true,
+//     duration: 10000,
+//     easing: 'linear'
+// })
+
+// anime.timeline({
+//         targets: ".items1",
+//         duration: 2000,
+//         delay: function (el, i) {
+//             return i * 200
+//         },
+//         loop: true,
+//         direction: 'alternate',
+//         easing: "easeInCubic",
+//         rotateX: function (el, i) {
+//             return [90, -90];
+//         },
+//         rotateY: function (el, i) {
+//             return [90, -90];
+//         },
+//         rotateZ: function (el, i) {
+//             return [180, -180];
+//         },
+//         backgroundColor: ['#FFF76D', '#FFD6D6', '#8EEFAF'],
+//         scale: [0.8, 2, 0.8],
+//         opacity: [0, 3, 0],
+//         filter: ["blur(3px)", "blur(2px)", "blur(2px)"],
+
+//     })
+//     .add({
+//         targets: '.items2',
+//         duration: 2000,
+//         direction: "alternate",
+//         loop: true,
+//         easing: "easeInSine",
+//         rotateX: function (el, i) {
+//             return [Math.random() * -180, Math.random() * 180];
+//         },
+//         rotateY: function (el, i) {
+//             return [Math.random() * -180, Math.random() * 180];
+//         },
+//         rotateZ: function (el, i) {
+//             return [Math.random() * -180, Math.random() * 180];
+//         },
+//         scale: [0, 2, 0]
+//     })
+
+// anime
+//   .timeline({
+//     direction: 'alternate',
+//     loop: true
+//   })
+//   .add({
+//     targets: '.items',
+//     duration: 2000,
+//     easing: 'easeOutQuad',
+//     delay: function(el, i) {
+//       return 200 * i;
+//     },
+//     translateX: function(el, i) {
+//       return [
+//         countW * (i % 4) + itemsWidth * (i % 4),
+//         wrapperWidth / 2 - itemsWidth / 2
+//       ];
+//     },
+//     translateY: function(el, i) {
+//       return [countH * ~~(i / 4), wrapperHeight / 2 - itemsHeight / 2];
+//     },
+//     rotateX: [0, 720],
+//     rorateY: [0, 360],
+//     scale: [1, 3, 2],
+//     backgroundColor: ['#FF9898', '#FFD6D6'],
+//   })
+//   .add({
+//     targets: '.items',
+//     filter: ['blur(0px)', 'blur(2px)', 'blur(1px)'],
+//     scale: [1, 4, 1],
+//     easing: 'easeOutQuad',
+//     duration: 2000,
+//     delay: function(el, i) {
+//       return i * 200;
+//     },
+//     rotateX: function(el, i) {
+//       return [-360, 360];
+//     },
+//     rotateY: function(el, i) {
+//       return [180, -180];
+//     },
+//     backgroundColor: ['#FFD6D6', '#FF9898'],
+//   });
+
+// anime
+//   .timeline({
+//     direction: 'alternate',
+//     loop: true
+//   })
+//   .add({
+//     targets: '.items',
+//     duration: 3000,
+//     easing: 'easeInOutSine',
+//     delay: function(el, i) {
+//       return 250 * i;
+//     },
+//     translateX: function(el, i) {
+//       return [
+//         countW * (i % 4) + itemsWidth * (i % 4),
+//         wrapperWidth / 2 - itemsWidth / 2
+//       ];
+//     },
+//     translateY: function(el, i) {
+//       return [countH * ~~(i / 4), wrapperHeight / 2 - itemsHeight / 2];
+//     },
+//     rotateX: [0, 900],
+//     rorateY: [0, 900],
+//     scale: [1, 4, 2, 1],
+//     backgroundColor: ['#FFD6D6', '#FF9898']
+//   });
+
+// anime
+//   .timeline({})
+//   .add({
+//     targets: '.items',
+//     duration: 900,
+//     easing: 'easeInSine',
+//     delay: function(el, i) {
+//       return 300 * i;
+//     },
+//     translateX: function(el, i) {
+//       return [
+//         countW * (i % 4) + itemsWidth * (i % 4),
+//         wrapperWidth / 2 - itemsWidth / 2
+//       ];
+//     },
+//     translateY: function(el, i) {
+//       return [countH * ~~(i / 4), wrapperHeight / 2 - itemsHeight / 2];
+//     },
+//     // rotateX: [180, 360],
+//     // rorateY: [180, 360],
+//     scale: [1, 3],
+//     backgroundColor: ['#FFCCCC', '#FFFCA7', '#FFCCCC']
+//   })
+//   .add({
+//     targets: '.items',
+//     delay: function(el, i) {
+//       return 100 * i;
+//     },
+//     duration: 3000,
+//     direction: 'alternate',
+//     loop: true,
+//     easing: 'easeOutCubic',
+//     rotateX: function(el, i) {
+//       return [0, 180];
+//     },
+//     rotateY: function(el, i) {
+//       return [0, 180];
+//     },
+//     rotateZ: function(el, i) {
+//       return [-90, 90];
+//     },
+//     backgroundColor: ['#FFCCCC', '#FFFCA7', '#C4DA9F', '#FFFCA7'],
+//     filter: ['blur(0px)', 'blur(10px)'],
+//     scale: [2, 4, 2]
+//   })
+//   .add({
+//     targets: '.items',
+//     duration: 1200,
+//     easing: 'easeInQuart',
+//     filter: ['blur(8px)', 'blur(0px)'],
+//     scale: [3, 0],
+//     opacity: [1, 0],
+//     backgroundColor: ['#FFFCA7', '#FFCCCC']
+//   });
+
+const wrapper = document.querySelector('#wrapper');
+wrapper.insertAdjacentHTML('afterbegin', htmlCreater('items', 8));
+const items = document.querySelector('.items');
+const wrapperWidth = wrapper.clientWidth;
+const wrapperHeight = wrapper.clientHeight;
+const itemsWidth = items.clientWidth;
+const itemsHeight = items.clientHeight;
+var countW = (wrapperWidth - itemsWidth * 4) / 3;
+var countH = wrapperHeight - itemsHeight;
+
+function htmlCreater(className, number) {
+  let html = '';
+  for (let i = 0; i < number; i++) {
+    html += `<div class ="${className}">▲</div>`;
+  }
+  return html;
+}
+
+const itemsBorder = '15px';
+
+anime
+  .timeline({})
+  .add({
+    targets: '.items',
+    duration: 1800,
+    easing: 'linear',
+    translateX: [
+      wrapperWidth / 2 - itemsWidth / 2,
+      wrapperWidth / 2 - itemsWidth / 2
+    ],
+    translateY: [
+      wrapperHeight / 2 - itemsHeight,
+      wrapperHeight / 2 - itemsHeight
+    ],
+    scale: [4, 1],
+    opacity: [1, 0, 1, 0, 1, 0],
+    color: '#4DBEFF'
+  })
+  .add({
+    targets: '.items',
+    duration: 1000,
+    easing: 'linear',
+    translateX: [
+      wrapperWidth / 2 - itemsWidth / 2,
+      wrapperWidth / 2 - itemsWidth / 2
+    ],
+    translateY: [
+      wrapperHeight / 2 - itemsHeight,
+      wrapperHeight / 2 - itemsHeight
+    ],
+    scale: [1, 4, 1],
+    opacity: 1,
+    color: '#4DBEFF'
+  })
+  .add({
+    targets: '.items',
+    duration: 250,
+    easing: 'linear',
+    translateX: function(el, i) {
+      return [
+        wrapperWidth / 2 - itemsWidth / 2,
+        countW * (i % 4) + itemsWidth * (i % 4)
+      ];
+    },
+    translateY: function(el, i) {
+      return [wrapperHeight / 2 - itemsHeight / 2, countH * ~~(i / 4)];
+    },
+    rotateZ: [-180, 180],
+    opacity: [1, 0],
+    scale: 0.5,
+    color: ['#4DBEFF', '#48D1CC']
+  });
